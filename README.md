@@ -10,6 +10,9 @@
 
 > Repz é um aplicativo para você criar registrar seus treinos, e compartilhar eles em uma nova rede social para atletas.
 
+<img src="https://cdn.iconscout.com/icon/free/png-256/free-figma-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944870.png?f=webp&w=256" width="48"> -
+[Figma do projeto](https://www.figma.com/design/RPPjv0uSWyZRD2Eto3HPix/Workout-Tracker-App?node-id=3-7&t=3NRZib1zll42oshe-1)
+
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
