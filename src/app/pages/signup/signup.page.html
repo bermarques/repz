@@ -1,13 +1,64 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="header">
+      <h1>Cadastrar-se</h1>
+      <p>Crie uma conta para continuar</p>
+    </div>
+    <form>
+      <div>
+        <div>
+          <ion-label>
+            <label>Nome</label>
+          </ion-label>
+          <ion-item>
+            <ion-input placeholder="Seu nome completo"></ion-input>
+          </ion-item>
+        </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+        <div>
+          <ion-label>
+            <label>Endereço de e-mail</label>
+          </ion-label>
+          <ion-item>
+            <ion-input placeholder="exemplo@email.com" type="email"></ion-input>
+          </ion-item>
+        </div>
+
+        <div>
+          <ion-label>
+            <label>Senha</label>
+          </ion-label>
+          <ion-item>
+            <ion-input placeholder="Senha"></ion-input>
+            <ion-input-password-toggle
+              slot="end"
+              color="medium"
+            ></ion-input-password-toggle>
+          </ion-item>
+        </div>
+        <ion-item>
+          <ion-input placeholder="Confirmar senha"></ion-input>
+          <ion-input-password-toggle
+            slot="end"
+            color="medium"
+          ></ion-input-password-toggle>
+        </ion-item>
+        <mat-checkbox aria-label="agreeWithTerms" class="checkbox">
+          <p>
+            Eu li e concordo com os
+            <a href="#" (click)="$event.stopPropagation()"
+              >Termos e Condições</a
+            >
+            e a
+            <a href="#" (click)="$event.stopPropagation()"
+              >Política de Privacidade</a
+            >
+          </p>
+        </mat-checkbox>
+        <ion-button size="small" class="loginButton" expand="block"
+          >Cadastrar</ion-button
+        >
+      </div>
+    </form>
+  </div>
 </ion-content>

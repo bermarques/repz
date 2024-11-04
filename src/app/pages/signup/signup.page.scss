@@ -1,0 +1,70 @@
+.container {
+}
+
+ion-content {
+  --background: var(--neutral-dark-darkest);
+}
+
+.header {
+  h1 {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--neutral-light-lightest);
+  }
+
+  p {
+    font-size: 12px;
+    color: var(--neutral-light-light);
+  }
+
+  margin-bottom: 24px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-light-lightest);
+}
+
+.loginButton {
+  height: 36px;
+  color: var(--neutral-light-lightest);
+  --border-radius: 12px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+ion-input {
+  height: 48px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+ion-item {
+  border: 1px solid var(--neutral-light-darkest);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  --background: transparent;
+}
+
+.checkbox {
+  p {
+    color: var(--neutral-light-light);
+    margin: 0;
+    font-size: 12px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 800;
+  }
+}
+
+::ng-deep .mdc-checkbox__background {
+  border-color: var(--neutral-dark-lightest) !important;
+}
+
+::ng-deep .mat-mdc-checkbox-checked .mdc-checkbox__background {
+  border-color: var(--neutral-dark-lightest) !important;
+  background-color: transparent !important;
+}
