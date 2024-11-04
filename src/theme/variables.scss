@@ -2,6 +2,10 @@
 
 :root {
   letter-spacing: 0.16px;
+
+  ion-content {
+    --background: var(--neutral-dark-darkest)
+  }
   --ion-padding: 24px;
   --ion-font-family: 'Inter', "Roboto" , "Helvetica-Neue", "sans-serif";
     
