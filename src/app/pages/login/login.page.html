@@ -3,32 +3,54 @@
     <ion-text>
       <h1>Bem-vindo!</h1>
     </ion-text>
-    <form>
+    <form [formGroup]="loginForm">
       <div>
         <ion-item>
           <ion-input
             placeholder="Email ou nome de usuário"
             class="input"
+            formControlName="email"
           ></ion-input>
         </ion-item>
+        <div
+          *ngIf="this.loginForm.controls?.['email'].touched && this.loginForm.controls?.['email'].invalid"
+          class="error"
+        >
+          <ion-text *ngIf="errorControl.email.errors?.required"
+            >Email é obrigatório.</ion-text
+          >
+          <ion-text *ngIf="errorControl.email.errors?.pattern"
+            >Email inválido.</ion-text
+          >
+        </div>
         <ion-item>
-          <ion-input placeholder="Senha" type="password" class="input">
+          <ion-input
+            placeholder="Senha"
+            type="password"
+            class="input"
+            formControlName="password"
+          >
             <ion-input-password-toggle
               slot="end"
               color="medium"
             ></ion-input-password-toggle>
           </ion-input>
         </ion-item>
+
         <div class="forgotPassword">
-          <a [routerLinkActive]="['/resetPassword']">Esqueceu a senha?</a>
+          <a [routerLink]="['/reset-password']">Esqueceu a senha?</a>
         </div>
-        <ion-button size="small" class="loginButton" expand="block"
+        <ion-button
+          size="small"
+          class="loginButton"
+          expand="block"
+          (click)="signIn()"
           >Login</ion-button
         >
         <div>
           <p class="signupLink">
             Não tem cadastro?
-            <a [routerLinkActive]="['/signup']">Cadastre-se</a>
+            <a [routerLink]="['/signup']">Cadastre-se</a>
           </p>
         </div>
       </div>

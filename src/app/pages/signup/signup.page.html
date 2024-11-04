@@ -4,15 +4,26 @@
       <h1>Cadastrar-se</h1>
       <p>Crie uma conta para continuar</p>
     </div>
-    <form>
+    <form [formGroup]="regForm" novalidate>
       <div>
         <div>
           <ion-label>
             <label>Nome</label>
           </ion-label>
           <ion-item>
-            <ion-input placeholder="Seu nome completo"></ion-input>
+            <ion-input
+              placeholder="Seu nome completo"
+              formControlName="fullname"
+            ></ion-input>
           </ion-item>
+        </div>
+        <div
+          *ngIf="this.regForm.controls?.['fullname'].touched && this.regForm.controls?.['fullname'].invalid"
+          class="error"
+        >
+          <ion-text *ngIf="errorControl.fullname.errors?.required" class="error"
+            >Nome é obrigatório.</ion-text
+          >
         </div>
 
         <div>
@@ -20,8 +31,23 @@
             <label>Endereço de e-mail</label>
           </ion-label>
           <ion-item>
-            <ion-input placeholder="exemplo@email.com" type="email"></ion-input>
+            <ion-input
+              placeholder="exemplo@email.com"
+              type="email"
+              formControlName="email"
+            ></ion-input>
           </ion-item>
+        </div>
+        <div
+          *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid"
+          class="error"
+        >
+          <ion-text *ngIf="errorControl.email.errors?.required"
+            >Email é obrigatório.</ion-text
+          >
+          <ion-text *ngIf="errorControl.email.errors?.pattern"
+            >Email inválido.</ion-text
+          >
         </div>
 
         <div>
@@ -29,20 +55,55 @@
             <label>Senha</label>
           </ion-label>
           <ion-item>
-            <ion-input placeholder="Senha"></ion-input>
-            <ion-input-password-toggle
-              slot="end"
-              color="medium"
-            ></ion-input-password-toggle>
+            <ion-input
+              type="password"
+              placeholder="Senha"
+              formControlName="password"
+            >
+              <ion-input-password-toggle
+                slot="end"
+                color="medium"
+              ></ion-input-password-toggle
+            ></ion-input>
           </ion-item>
         </div>
-        <ion-item>
-          <ion-input placeholder="Confirmar senha"></ion-input>
-          <ion-input-password-toggle
-            slot="end"
-            color="medium"
-          ></ion-input-password-toggle>
-        </ion-item>
+        <div
+          *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid"
+          class="error"
+        >
+          <ion-text *ngIf="errorControl.password.errors?.required"
+            >Senha é obrigatório.</ion-text
+          >
+          <ion-text *ngIf="errorControl.password.errors?.pattern"
+            >Sua senha precisa ter mais de 8 caracteres, sendo pelo menos uma
+            letra, um número e um caractere especial.
+          </ion-text>
+        </div>
+
+        <div>
+          <ion-label>
+            <label>Confirme a senha</label>
+          </ion-label>
+          <ion-item>
+            <ion-input
+              type="password"
+              placeholder="Confirmar senha"
+              formControlName="confirmPassword"
+            >
+              <ion-input-password-toggle
+                slot="end"
+                color="medium"
+              ></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+          <div
+            class="error"
+            *ngIf="this.regForm.controls?.['confirmPassword'].touched && this.regForm.errors?.['PasswordNoMatch']"
+          >
+            Senhas não são iguais
+          </div>
+        </div>
+
         <mat-checkbox aria-label="agreeWithTerms" class="checkbox">
           <p>
             Eu li e concordo com os
@@ -55,7 +116,11 @@
             >
           </p>
         </mat-checkbox>
-        <ion-button size="small" class="loginButton" expand="block"
+        <ion-button
+          size="small"
+          class="loginButton"
+          expand="block"
+          (click)="signUp()"
           >Cadastrar</ion-button
         >
       </div>
