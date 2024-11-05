@@ -75,7 +75,7 @@ Thumbs.db
 .runtimeconfig.json
 
 # Ignora todos os arquivos dentro da pasta environments
-app/environments/environment*
+*/environments/environment*
 
 # Exceto o environments/environment.example
-!app/environments/environment.example
+!*/environments/environment.example.ts
