@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ResetPasswordPageRoutingModule } from './reset-password-routing.module';
 
 import { ResetPasswordPage } from './reset-password.page';
+import { HeaderComponent } from 'src/app/header/header.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ResetPasswordPage } from './reset-password.page';
     ReactiveFormsModule,
     IonicModule,
     ResetPasswordPageRoutingModule,
+    HeaderComponent,
   ],
   declarations: [ResetPasswordPage],
 })
