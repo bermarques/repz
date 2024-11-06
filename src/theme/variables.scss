@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   letter-spacing: 0.16px;
 
   ion-content {
-    --background: var(--neutral-dark-darkest)
+    --background: var(--neutral-dark-darkest);
   }
   --ion-padding: 24px;
-  --ion-font-family: 'Inter', "Roboto" , "Helvetica-Neue", "sans-serif";
-    
+  --ion-font-family: "Inter", "Roboto", "Helvetica-Neue", "sans-serif";
+
   --ion-color-primary: #006ffd;
   --ion-color-primary-rgb: 0, 111, 253;
   --ion-color-primary-contrast: #000000;
@@ -84,11 +84,11 @@
   --neutral-light-light: #f8f9fe;
   --neutral-light-lightest: #ffffff;
 
-  --highlight-darkest: #006FFD
-  --highlight-dark: #006FFD
-  --highlight-medium: #6FBAFF
-  --highlight-light: #B4DBFF
-  --highlight-lightest: #EAF2FF
+  --highlight-darkest: #006ffd;
+  --highlight-dark: #006ffd;
+  --highlight-medium: #6fbaff;
+  --highlight-light: #b4dbff;
+  --highlight-lightest: #eaf2ff;
 
-  --support-warning: #ED3241
+  --support-warning: #ed3241;
 }

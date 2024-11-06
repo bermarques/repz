@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import firebase from 'firebase/compat/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { GoogleAuthProvider, FacebookAuthProvider } from '@firebase/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +21,14 @@ export class AuthenticationService {
 
   async resetPassword(email: string) {
     return await this.ngFireAuth.sendPasswordResetEmail(email);
+  }
+
+  async googleLogin() {
+    return await this.ngFireAuth.signInWithPopup(new GoogleAuthProvider());
+  }
+
+  async facebookLogin() {
+    return await this.ngFireAuth.signInWithPopup(new FacebookAuthProvider());
   }
 
   async signOut() {

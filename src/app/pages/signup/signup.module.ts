@@ -8,7 +8,7 @@ import { SignupPageRoutingModule } from './signup-routing.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { SignupPage } from './signup.page';
-import { HeaderComponent } from 'src/app/header/header.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   imports: [
