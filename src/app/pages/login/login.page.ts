@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
@@ -12,10 +12,11 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
   constructor(
-    public formBuilder: FormBuilder,
-    public loadingCtrl: LoadingController,
-    public authService: AuthenticationService,
-    public router: Router
+    private formBuilder: FormBuilder,
+    private loadingCtrl: LoadingController,
+    private authService: AuthenticationService,
+    private router: Router,
+    private toastController: ToastController
   ) {}
 
   ngOnInit() {
@@ -52,11 +53,22 @@ export class LoginPage implements OnInit {
     this.authService.loginUser(email, password).then(
       () => {
         loading.dismiss();
-        this.router.navigate(['/home']);
+        this.router.navigate(['/tab-home']);
       },
       (error) => {
         loading.dismiss();
+        this.presentToast(error.message);
       }
     );
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 1500,
+      position: 'top',
+    });
+
+    await toast.present();
   }
 }

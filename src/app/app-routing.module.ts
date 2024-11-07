@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {
+  canActivate,
+  redirectUnauthorizedTo,
+  redirectLoggedInTo,
+} from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['tab-home']);
 
 const routes: Routes = [
   {
@@ -16,6 +24,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginPageModule),
+    ...canActivate(redirectLoggedInToHome),
   },
   {
     path: 'signup',
@@ -32,6 +41,28 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/reset-password/reset-password.module').then(
         (m) => m.ResetPasswordPageModule
+      ),
+  },
+  {
+    path: 'tab-home',
+    loadChildren: () =>
+      import('./pages/tab-home/tab-home.module').then(
+        (m) => m.TabHomePageModule
+      ),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+  {
+    path: 'tab-workouts',
+    loadChildren: () =>
+      import('./pages/tab-workouts/tab-workouts.module').then(
+        (m) => m.TabWorkoutsPageModule
+      ),
+  },
+  {
+    path: 'tab-profile',
+    loadChildren: () =>
+      import('./pages/tab-profile/tab-profile.module').then(
+        (m) => m.TabProfilePageModule
       ),
   },
 ];
