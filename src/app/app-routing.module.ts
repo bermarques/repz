@@ -5,9 +5,10 @@ import {
   redirectUnauthorizedTo,
   redirectLoggedInTo,
 } from '@angular/fire/auth-guard';
+import { TabsPage } from './pages/tabs/tabs.page';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
-const redirectLoggedInToHome = () => redirectLoggedInTo(['tab-home']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['tabs/home']);
 
 const routes: Routes = [
   {
@@ -44,26 +45,49 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'tab-home',
-    loadChildren: () =>
-      import('./pages/tab-home/tab-home.module').then(
-        (m) => m.TabHomePageModule
-      ),
-    ...canActivate(redirectUnauthorizedToLogin),
-  },
-  {
-    path: 'tab-workouts',
-    loadChildren: () =>
-      import('./pages/tab-workouts/tab-workouts.module').then(
-        (m) => m.TabWorkoutsPageModule
-      ),
-  },
-  {
-    path: 'tab-profile',
-    loadChildren: () =>
-      import('./pages/tab-profile/tab-profile.module').then(
-        (m) => m.TabProfilePageModule
-      ),
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'home',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./pages/tab-home/tab-home.module').then(
+                (m) => m.TabHomePageModule
+              ),
+            ...canActivate(redirectUnauthorizedToLogin),
+          },
+        ],
+      },
+      {
+        path: 'workouts',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./pages/tab-workouts/tab-workouts.module').then(
+                (m) => m.TabWorkoutsPageModule
+              ),
+            ...canActivate(redirectUnauthorizedToLogin),
+          },
+        ],
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./pages/tab-profile/tab-profile.module').then(
+                (m) => m.TabProfilePageModule
+              ),
+            ...canActivate(redirectUnauthorizedToLogin),
+          },
+        ],
+      },
+    ],
   },
 ];
 

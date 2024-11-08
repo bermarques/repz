@@ -13,8 +13,8 @@ import { TabWorkoutsPage } from './tab-workouts.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TabWorkoutsPageRoutingModule
+    TabWorkoutsPageRoutingModule,
   ],
-  declarations: [TabWorkoutsPage]
+  declarations: [TabWorkoutsPage],
 })
 export class TabWorkoutsPageModule {}

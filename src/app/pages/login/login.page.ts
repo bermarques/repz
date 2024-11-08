@@ -53,7 +53,7 @@ export class LoginPage implements OnInit {
     this.authService.loginUser(email, password).then(
       () => {
         loading.dismiss();
-        this.router.navigate(['/tab-home']);
+        this.router.navigate(['/tabs/home']);
       },
       (error) => {
         loading.dismiss();

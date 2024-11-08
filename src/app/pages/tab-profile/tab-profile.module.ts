@@ -13,8 +13,8 @@ import { TabProfilePage } from './tab-profile.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TabProfilePageRoutingModule
+    TabProfilePageRoutingModule,
   ],
-  declarations: [TabProfilePage]
+  declarations: [TabProfilePage],
 })
 export class TabProfilePageModule {}
