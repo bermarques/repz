@@ -1,11 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" *ngIf="showBackArrow">
-      <ion-button (click)="onBack()">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+    <ion-buttons slot="start" *ngIf="leftControl">
+      <ion-button (click)="handleLeftControlClick()">
+        <ion-icon
+          slot="icon-only"
+          [name]="leftText"
+          *ngIf="leftControl === 'icon'"
+        ></ion-icon>
+        {{ leftControl === "text" ? leftText : "" }}
       </ion-button>
     </ion-buttons>
 
     <ion-title>{{ title }}</ion-title>
+
+    <ion-buttons slot="end" *ngIf="rightControl">
+      <ion-button (click)="handleRightControlClick()">
+        <ion-icon
+          slot="icon-only"
+          [name]="rightText"
+          *ngIf="leftControl === 'icon'"
+        ></ion-icon>
+        {{ rightControl === "text" ? rightText : "" }}
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>

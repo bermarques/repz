@@ -1,5 +1,10 @@
 <ion-content>
-  <app-header [title]="'Cadastro'" [showBackArrow]="true"></app-header>
+  <app-header
+    [title]="'Cadastro'"
+    leftControl="icon"
+    leftText="chevron-back-outline"
+    (onLeftControlClick)="goBack()"
+  ></app-header>
   <div class="container ion-padding">
     <div class="header">
       <h1>Cadastrar-se</h1>

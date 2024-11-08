@@ -60,11 +60,15 @@ export class ResetPasswordPage implements OnInit {
 
     toast.present();
     toast.onDidDismiss().then(() => {
-      this.navCtrl.pop();
+      this.goBack();
     });
   }
 
   get errorControl() {
     return this.resetPasswordForm.controls;
+  }
+
+  goBack() {
+    this.navCtrl.pop();
   }
 }

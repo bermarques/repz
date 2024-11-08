@@ -1,5 +1,5 @@
 import { CommonModule, Location } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -11,13 +11,23 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HeaderComponent implements OnInit {
   @Input() title: string = '';
-  @Input() showBackArrow: boolean = true;
+  @Input() leftControl?: 'icon' | 'text';
+  @Input() rightControl?: 'icon' | 'text';
+  @Input() rightText?: string = '';
+  @Input() leftText?: string = '';
 
-  constructor(private location: Location) {}
+  @Output() onLeftControlClick? = new EventEmitter();
+  @Output() onRightControlClick? = new EventEmitter();
+
+  constructor() {}
 
   ngOnInit() {}
 
-  onBack() {
-    this.location.back();
+  handleLeftControlClick() {
+    this.onLeftControlClick.emit();
+  }
+
+  handleRightControlClick() {
+    this.onRightControlClick.emit();
   }
 }

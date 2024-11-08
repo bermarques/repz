@@ -7,7 +7,6 @@ import {
 } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { confirmPasswordValidator } from './confirm-password.validator';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -73,7 +72,7 @@ export class SignupPage implements OnInit {
       if (user) {
         loading.dismiss();
         this.presentToast('Usuário criado com sucesso!');
-        this.navCtrl.pop();
+        this.goBack();
       }
     }
   }
@@ -86,5 +85,9 @@ export class SignupPage implements OnInit {
     });
 
     await toast.present();
+  }
+
+  goBack() {
+    this.navCtrl.pop();
   }
 }
