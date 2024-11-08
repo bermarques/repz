@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoadingController, ToastController } from '@ionic/angular';
+import {
+  LoadingController,
+  NavController,
+  ToastController,
+} from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { confirmPasswordValidator } from './confirm-password.validator';
 import { Router } from '@angular/router';
@@ -16,7 +20,7 @@ export class SignupPage implements OnInit {
     private formBuilder: FormBuilder,
     private loadingCtrl: LoadingController,
     private authService: AuthenticationService,
-    private router: Router,
+    private navCtrl: NavController,
     private toastController: ToastController
   ) {}
 
@@ -69,7 +73,7 @@ export class SignupPage implements OnInit {
       if (user) {
         loading.dismiss();
         this.presentToast('Usuário criado com sucesso!');
-        this.router.navigate(['/login']);
+        this.navCtrl.pop();
       }
     }
   }

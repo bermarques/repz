@@ -1,0 +1,13 @@
+ion-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+ion-button {
+  color: var(--support-warning);
+  font-size: 14px;
+  --border-radius: 2px;
+  --background: var(--neutral-dark-dark);
+}

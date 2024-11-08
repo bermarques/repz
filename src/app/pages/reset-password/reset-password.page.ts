@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { LoadingController, ToastController } from '@ionic/angular';
+import {
+  LoadingController,
+  NavController,
+  ToastController,
+} from '@ionic/angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +18,7 @@ export class ResetPasswordPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthenticationService,
-    private router: Router,
+    private navCtrl: NavController,
     private toastController: ToastController,
     private loadingCtrl: LoadingController
   ) {}
@@ -56,7 +60,7 @@ export class ResetPasswordPage implements OnInit {
 
     toast.present();
     toast.onDidDismiss().then(() => {
-      this.router.navigate(['/login']);
+      this.navCtrl.pop();
     });
   }
 
