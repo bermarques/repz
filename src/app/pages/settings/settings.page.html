@@ -1,0 +1,67 @@
+<ion-content>
+  <app-header
+    [title]="'Configurações'"
+    leftControl="icon"
+    leftText="chevron-back-outline"
+    (onLeftControlClick)="onBack()"
+  ></app-header>
+  <div class="container">
+    <p class="label">Conta</p>
+    <div class="button-group">
+      <ion-button
+        expand="block"
+        (click)="goToPage('profile')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="person-outline"></ion-icon>
+        <span class="ion-text-left">Perfil</span>
+      </ion-button>
+      <ion-button
+        expand="block"
+        (click)="goToPage('account')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="lock-closed-outline"></ion-icon>
+        <span class="ion-text-left">Conta</span>
+      </ion-button>
+      <ion-button
+        expand="block"
+        (click)="goToPage('notifications')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="notifications-outline"></ion-icon>
+        <span class="ion-text-left">Notificações</span>
+      </ion-button>
+    </div>
+    <p class="label">Preferências</p>
+    <div class="button-group">
+      <ion-button
+        expand="block"
+        (click)="goToPage('workouts')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="barbell-outline"></ion-icon>
+        <span class="ion-text-left">Treinos</span>
+      </ion-button>
+      <ion-button
+        expand="block"
+        (click)="goToPage('units')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="speedometer-outline"></ion-icon>
+        <span class="ion-text-left">Unidades</span>
+      </ion-button>
+      <ion-button
+        expand="block"
+        (click)="goToPage('language')"
+        class="setting-button"
+      >
+        <ion-icon slot="start" icon="language-outline"></ion-icon>
+        <span class="ion-text-left">Idioma</span>
+      </ion-button>
+    </div>
+    <ion-button expand="block" (click)="logout()" class="logout-button">
+      Sair
+    </ion-button>
+  </div>
+</ion-content>

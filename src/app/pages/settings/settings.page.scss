@@ -1,0 +1,38 @@
+.container {
+  padding: 16px;
+}
+
+.logout-button {
+  color: var(--support-warning);
+  font-size: 14px;
+  --border-radius: 2px;
+  --background: var(--neutral-dark-dark);
+  margin-top: 12px;
+}
+
+.setting-button {
+  color: var(--neutral-light-lightest);
+  font-weight: 600;
+  font-size: 14px;
+  --border-radius: 2px;
+  --background: var(--neutral-dark-dark);
+  margin: 0;
+  --padding-start: 18px;
+}
+
+span.ion-text-left {
+  margin-right: auto;
+  margin-left: 4px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 12px 0px;
+}

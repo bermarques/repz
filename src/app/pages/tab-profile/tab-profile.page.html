@@ -1,3 +1,11 @@
 <ion-content>
-  <ion-button expand="block" (click)="logout()"> Sair </ion-button>
+  <app-header
+    [title]="'bermarques'"
+    rightControl="icon"
+    leftControl="text"
+    rightText="settings-outline"
+    leftText="Editar perfil"
+    (onRightControlClick)="goToSettings()"
+  ></app-header>
+  <div class="container"></div>
 </ion-content>

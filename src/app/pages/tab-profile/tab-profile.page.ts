@@ -9,15 +9,11 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./tab-profile.page.scss'],
 })
 export class TabProfilePage implements OnInit {
-  constructor(
-    private authService: AuthenticationService,
-    private navCtrl: NavController
-  ) {}
+  constructor(private navCtrl: NavController) {}
 
   ngOnInit() {}
 
-  logout() {
-    this.authService.signOut();
-    this.navCtrl.navigateBack('/', { replaceUrl: true });
+  goToSettings() {
+    this.navCtrl.navigateForward('/settings');
   }
 }

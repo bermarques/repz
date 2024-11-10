@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TabProfilePageRoutingModule } from './tab-profile-routing.module';
+import { SettingsPageRoutingModule } from './settings-routing.module';
 
-import { TabProfilePage } from './tab-profile.page';
+import { SettingsPage } from './settings.page';
 import { HeaderComponent } from '../../components/header/header.component';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { HeaderComponent } from '../../components/header/header.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    TabProfilePageRoutingModule,
+    SettingsPageRoutingModule,
     HeaderComponent,
   ],
-  declarations: [TabProfilePage],
+  declarations: [SettingsPage],
 })
-export class TabProfilePageModule {}
+export class SettingsPageModule {}
