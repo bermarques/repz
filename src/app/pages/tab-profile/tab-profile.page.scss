@@ -1,3 +1,44 @@
 .container {
-  padding: 16px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+h3 {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.profile {
+  display: flex;
+  gap: 12px;
+}
+
+.group-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.group {
+  font-size: 12px;
+  p {
+    margin: 0;
+  }
+}
+
+.group-title {
+  color: var(--neutral-dark-lightest);
+}
+
+ion-avatar {
+  display: inline;
+  width: 56px;
+
+  img {
+    height: 56px;
+  }
 }

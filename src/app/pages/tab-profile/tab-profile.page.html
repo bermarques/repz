@@ -7,5 +7,30 @@
     leftText="Editar perfil"
     (onRightControlClick)="goToSettings()"
   ></app-header>
-  <div class="container"></div>
+  <div class="container">
+    <div class="profile">
+      <ion-avatar
+        ><img
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          alt="User profile image"
+      /></ion-avatar>
+      <div class="profile-info">
+        <h3>bermarques</h3>
+        <div class="group-container">
+          <div class="group">
+            <p class="group-title">Treinos</p>
+            <p>72</p>
+          </div>
+          <div class="group">
+            <p class="group-title">Seguidores</p>
+            <p>0</p>
+          </div>
+          <div class="group">
+            <p class="group-title">Seguindo</p>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
