@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TabWorkoutsPageRoutingModule } from './tab-workouts-routing.module';
 
 import { TabWorkoutsPage } from './tab-workouts.page';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { TabWorkoutsPage } from './tab-workouts.page';
     FormsModule,
     IonicModule,
     TabWorkoutsPageRoutingModule,
+    HeaderComponent,
   ],
   declarations: [TabWorkoutsPage],
 })
