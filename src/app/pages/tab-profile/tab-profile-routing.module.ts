@@ -7,7 +7,19 @@ const routes: Routes = [
   {
     path: '',
     component: TabProfilePage
+  },  {
+    path: 'statistics',
+    loadChildren: () => import('./statistics/statistics.module').then( m => m.StatisticsPageModule)
+  },
+  {
+    path: 'measurements',
+    loadChildren: () => import('./measurements/measurements.module').then( m => m.MeasurementsPageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
   }
+
 ];
 
 @NgModule({

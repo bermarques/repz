@@ -42,3 +42,38 @@ ion-avatar {
     height: 56px;
   }
 }
+
+.weekly-hours {
+  color: var(--neutral-dark-lightest);
+  font-size: 14px;
+  margin: 22px 0 10px 0;
+  .hours {
+    color: var(--neutral-light-lightest);
+  }
+}
+
+#profile-chart {
+  overflow: visible;
+}
+
+.setting-button {
+  color: var(--neutral-light-lightest);
+  font-weight: 600;
+  font-size: 14px;
+  --border-radius: 2px;
+  --background: var(--neutral-dark-dark);
+  margin: 0;
+  --padding-start: 18px;
+  font-family: "Nunito Sans";
+}
+
+span.ion-text-left {
+  margin-right: auto;
+  margin-left: 4px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

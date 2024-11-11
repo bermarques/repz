@@ -8,6 +8,7 @@ import { TabProfilePageRoutingModule } from './tab-profile-routing.module';
 
 import { TabProfilePage } from './tab-profile.page';
 import { HeaderComponent } from '../../components/header/header.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   imports: [
@@ -16,6 +17,9 @@ import { HeaderComponent } from '../../components/header/header.component';
     IonicModule,
     TabProfilePageRoutingModule,
     HeaderComponent,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   declarations: [TabProfilePage],
 })
