@@ -1,0 +1,43 @@
+ion-item {
+  --background: var(--neutral-dark-dark);
+  --padding-start: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+.item-inner {
+  align-items: flex-start !important;
+}
+
+ion-accordion {
+  border-radius: 8px;
+}
+
+ion-avatar {
+  width: 68px;
+  height: 68px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+
+ion-label {
+  font-weight: 800;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  margin-top: 2px;
+
+  p {
+    margin: 0;
+    font-weight: 300;
+  }
+}

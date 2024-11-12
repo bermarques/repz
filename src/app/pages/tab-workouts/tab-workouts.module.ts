@@ -8,6 +8,7 @@ import { TabWorkoutsPageRoutingModule } from './tab-workouts-routing.module';
 
 import { TabWorkoutsPage } from './tab-workouts.page';
 import { HeaderComponent } from '../../components/header/header.component';
+import { WorkoutRoutineComponent } from '../../components/workout-routine/workout-routine.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HeaderComponent } from '../../components/header/header.component';
     IonicModule,
     TabWorkoutsPageRoutingModule,
     HeaderComponent,
+    WorkoutRoutineComponent,
   ],
   declarations: [TabWorkoutsPage],
 })
