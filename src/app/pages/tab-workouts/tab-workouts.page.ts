@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fakeRoutine } from './fake-routine';
 
 @Component({
   selector: 'app-tab-workouts',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-workouts.page.scss'],
 })
 export class TabWorkoutsPage implements OnInit {
+  items = fakeRoutine;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
