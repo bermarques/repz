@@ -1,3 +1,25 @@
 .container {
   padding: 16px;
 }
+
+.action {
+  p {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  ion-button {
+    height: 36px;
+    font-size: 12px;
+    --border-radius: 8px;
+    color: var(--neutral-light-lightest);
+    --background: var(--neutral-dark-dark);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+}
+
+.routines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

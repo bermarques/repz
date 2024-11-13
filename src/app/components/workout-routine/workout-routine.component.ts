@@ -16,7 +16,5 @@ export class WorkoutRoutineComponent implements OnInit {
   @Input() items: Workout[] = [];
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.items);
-  }
+  ngOnInit() {}
 }
