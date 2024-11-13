@@ -1,16 +1,44 @@
-ion-item {
-  --background: var(--neutral-dark-dark);
-  --padding-start: 16px;
-  --padding-top: 16px;
-  --padding-bottom: 16px;
+mat-expansion-panel,
+mat-expansion-panel-header {
+  background: var(--neutral-dark-dark) !important;
+  box-shadow: none;
 }
 
-.item-inner {
-  align-items: flex-start !important;
+mat-expansion-panel {
+  padding: 19px;
+
+  mat-expansion-panel-header {
+    height: auto !important;
+  }
 }
 
-ion-accordion {
-  border-radius: 8px;
+.header-info {
+  color: var(--neutral-light-lightest);
+
+  .date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+::ng-deep {
+  mat-expansion-panel {
+    .mat-expansion-panel-body,
+    .mat-expansion-panel-header {
+      padding: 0;
+    }
+  }
 }
 
 ion-avatar {
@@ -18,26 +46,52 @@ ion-avatar {
   height: 68px;
 }
 
-.accordion-header {
+mat-panel-description {
   display: flex;
-  align-items: center;
   gap: 16px;
-  font-size: 13px;
 }
 
-ion-label {
-  font-weight: 800;
-}
+.expanded-content {
+  color: var(--neutral-light-lightest);
+  margin-top: 18px;
 
-.date {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  margin-top: 2px;
-
-  p {
+  p,
+  h5 {
     margin: 0;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+  .description {
+    font-size: 12px;
     font-weight: 300;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 6px;
+
+  ion-button {
+    height: 36px;
+    font-size: 12px;
+    margin: 0;
+    --border-radius: 6px;
+    color: var(--neutral-light-lightest);
+    font-family: "Nunito Sans";
+    font-weight: 600;
+  }
+}
+.half-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+
+  ion-button {
+    flex: 1;
+    --border-color: var(--neutral-light-light);
   }
 }

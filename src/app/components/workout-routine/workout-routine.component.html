@@ -1,19 +1,29 @@
-<ion-accordion-group>
-  <ion-accordion value="workout">
-    <ion-item slot="header">
-      <div class="accordion-header">
-        <ion-avatar
-          ><img src="assets/avatar.svg" alt="Workout image"
-        /></ion-avatar>
-        <div class="training-details">
-          <ion-label>First Accordion</ion-label>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        <ion-avatar>
+          <img src="assets/avatar.svg" alt="User profile image" />
+        </ion-avatar>
+        <div class="header-info">
+          <h4>Setembro</h4>
           <div class="date">
-            <ion-icon icon="calendar-outline"></ion-icon>
+            <ion-icon name="calendar-outline"></ion-icon>
             <p>21/09-2024 - 21/10/2024</p>
           </div>
         </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="expanded-content">
+      <h5 class="subtitle">Segunda</h5>
+      <p class="description">Ombro e braço</p>
+      <div class="button-group">
+        <div class="half-buttons">
+          <ion-button [fill]="'outline'">Histórico</ion-button>
+          <ion-button [fill]="'outline'">Ver treino</ion-button>
+        </div>
+        <ion-button expand="block">Iniciar Rotina</ion-button>
       </div>
-    </ion-item>
-    <div class="ion-padding" slot="content">First Content</div>
-  </ion-accordion>
-</ion-accordion-group>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
