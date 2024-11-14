@@ -1,0 +1,92 @@
+.summary-container {
+  margin-bottom: 32px;
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  ion-avatar {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.user-and-date {
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .username {
+    color: var(--neutral-light-lightest);
+  }
+  .date {
+    color: var(--neutral-dark-lightest);
+  }
+}
+
+.summary {
+  h5 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .summary-data {
+    display: flex;
+    gap: 12px;
+  }
+  .summary-block {
+    p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--neutral-light-lightest);
+      &:first-of-type {
+        font-size: 10px;
+        color: var(--neutral-dark-lightest);
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral-dark-medium);
+  margin: 12px 0;
+}
+
+.training-summary {
+  .title {
+    font-size: 12px;
+    color: var(--neutral-dark-lightest);
+  }
+
+  .exercise {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+
+    ion-avatar {
+      width: 40px;
+      height: 40px;
+    }
+    margin-bottom: 12px;
+  }
+
+  .see-more {
+    text-align: center;
+    font-size: 12px;
+    color: var(--neutral-dark-lightest);
+  }
+}
+
+.thick-divider {
+  width: 100%;
+  height: 8px;
+  background: var(--neutral-dark-medium);
+  margin: 16px 0;
+}

@@ -8,6 +8,7 @@ import { TabHomePageRoutingModule } from './tab-home-routing.module';
 
 import { TabHomePage } from './tab-home.page';
 import { HeaderComponent } from '../../components/header/header.component';
+import { WorkoutSummaryComponent } from 'src/app/components/workout-summary/workout-summary.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HeaderComponent } from '../../components/header/header.component';
     IonicModule,
     TabHomePageRoutingModule,
     HeaderComponent,
+    WorkoutSummaryComponent,
   ],
   declarations: [TabHomePage],
 })

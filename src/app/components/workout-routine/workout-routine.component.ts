@@ -10,7 +10,7 @@ import { DividerComponent } from '../divider/divider.component';
   templateUrl: './workout-routine.component.html',
   styleUrls: ['./workout-routine.component.scss'],
   standalone: true,
-  imports: [IonicModule, MatExpansionModule, CommonModule, DividerComponent],
+  imports: [IonicModule, MatExpansionModule, CommonModule],
 })
 export class WorkoutRoutineComponent implements OnInit {
   @Input() items: Workout[] = [];
