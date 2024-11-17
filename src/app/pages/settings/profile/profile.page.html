@@ -1,13 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <app-header
+    title="Editar perfil"
+    rightControl="text"
+    rightText="Salvar"
+    leftControl="icon"
+    leftText="chevron-back-outline"
+  ></app-header>
+  <div class="container">
+    <div class="profile-image-container">
+      <ion-avatar>
+        <img src="assets/avatar.svg" alt="User profile image" />
+      </ion-avatar>
+      <ion-button fill="clear">Alterar Foto</ion-button>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="public">
+      <p class="label">Dados de perfil público</p>
+      <form [formGroup]="userForm" novalidate>
+        <ion-input
+          label="Nome"
+          labelPlacement="fixed"
+          placeholder="Seu nome completo"
+          formControlName="fullname"
+        >
+        </ion-input>
+        <div class="divider"></div>
+        <ion-textarea
+          label="Bio"
+          labelPlacement="fixed"
+          placeholder="Descreva sua pessoa"
+          formControlName="bio"
+          rows="5"
+        ></ion-textarea>
+        <div class="divider"></div>
+        <div class="private">
+          <p class="label">Dados privados</p>
+          <ion-select
+            justify="space-between"
+            label="Sexo"
+            placeholder="Selecione"
+            interface="action-sheet"
+            cancelText="Cancelar"
+            formControlName="gender"
+          >
+            <ion-select-option value="M">Masculino</ion-select-option>
+            <ion-select-option value="F">Feminino</ion-select-option>
+          </ion-select>
+          <div class="divider"></div>
+          <div class="private">
+            <ion-select
+              justify="space-between"
+              label="Aniversário"
+              placeholder="Selecione"
+              interface="action-sheet"
+              cancelText="Cancelar"
+              formControlName="birthdate"
+            >
+              <ion-select-option value="M">Masculino</ion-select-option>
+              <ion-select-option value="F">Feminino</ion-select-option>
+            </ion-select>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </form>
+    </div>
+  </div>
 </ion-content>
